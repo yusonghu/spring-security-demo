@@ -1,0 +1,27 @@
+#alibaba:
+#  cloud:
+#    access-key: '****'
+#    secret-key: '****'
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
+  server:
+    port: 8081
+server:
+  port: 8080
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/security?serverTimezone=GMT
+    username: admin
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
